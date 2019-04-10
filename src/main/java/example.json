@@ -25,6 +25,7 @@
 			"suspend_deposit_desc": "",
 			"suspend_withdraw_desc": ""
 		},
+
 		{
 			"currency_addr_with_tag": false,
 			"fast_confirms": 1,
