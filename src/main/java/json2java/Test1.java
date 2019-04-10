@@ -40,6 +40,11 @@ public class Test1 {
 			public boolean isIncludeToString() {
 				return false;
 			}
+
+			@Override
+			public String getClassNamePrefix() {
+				return "Poloniex";
+			}
 		};
 		
 		RuleFactory ruleFactory = new RuleFactory(generationConfig, new GsonAnnotator(generationConfig), new SchemaStore());
@@ -47,7 +52,7 @@ public class Test1 {
 		SchemaMapper mapper = new SchemaMapper(ruleFactory, sg);
 		
 		
-		mapper.generate(codeModel, "HuobiCurrency", "com.jianrc.trade.huobi.hack", jsonschema.toString());
+		mapper.generate(codeModel, "Currency", "com.jianrc.trade.poloniex.rest", jsonschema.toString());
 		
 		codeModel.build(new File("src/main/java"));
 
